@@ -1,0 +1,183 @@
+/* google font -- Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+
+
+/*-------------------- 
+  custom properties 
+--------------------*/
+:root {
+    --primary-color: #E6533C;
+    --secondary-color: #FFFFFF;
+    --secondary-dark-color: #222222;
+    --text-color: #FFFFFF80;
+    
+    --percent100: 100%;
+
+    --fwN: 400;
+    --fwSB:600;
+    --fwB: 700;
+    --fwH: 900;
+
+}
+
+/*-------------------- 
+  preset properties 
+--------------------*/
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    color: var(--text-color);
+    background: none repeat scroll 0 0;
+    background-color: #000000;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main>section {
+    margin: 100px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: var(--percent100);
+    height: auto;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input {
+    outline: none;
+}
+
+input::placeholder {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+   color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3{
+   font-weight: var(--fwH);
+}
+
+h1 {
+    font-size: 4.8rem;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 3rem; /* 48px */
+}
+
+h3 {
+    font-size: 1.75rem; /* 28px */
+}
+
+h4 {
+    font-size: 2rem; /* 32px */
+    font-weight: var(--fwB);
+}
+
+h6 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: var(--fwSB);
+}
+
+/*--------------------   
+  * REUSABLE SELECTION 
+---------------------*/
+.container {
+    max-width: 1060px;
+    /* or 90% */
+    margin: 0 auto;
+    /* padding: 0 0.938em; */
+}
+
+.fit-btn {
+    padding: 16px 40px;
+    border-radius: 42px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    font-size: 1.125rem;
+    font-weight: var(--fwSB);
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+.fit-border-btn {
+    /* padding: 16px 40px; */
+    /* border-radius: 42px; */
+    /* color: var(--secondary-color); */
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    /* font-size: 1.125rem;
+    font-weight: var(--fwSB);
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: center; */
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*==================================================
+                header start
+==================================================*/
+
+/*----------------- nav-bar -----------------*/
+
+/* logo */
+
+/* menu */
+
+/*----------------- hero-section -----------------*/
+
+/* content */
+
+/* image */
+
+/*==================================================
+                header end
+==================================================*/
+
+
+
+
+/*----------------- responsive media query -----------------*/
+/* Desktop */
+@media screen and (min-width: 993px) {}
+
+/* Tablet */
+@media screen and (min-width: 576px) and (max-width: 992px) {}
+
+/* Mobile */
+@media screen and (max-width: 576px) {}
