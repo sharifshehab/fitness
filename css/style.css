@@ -508,6 +508,80 @@ p.banner-text {
                 team section end
 ==================================================*/
 
+/*==================================================
+                footer section start
+==================================================*/
+footer {
+    background-color: var(--secondary-dark-color);
+    padding: 70px 0 28px;
+}
+
+.footer-wrap {
+    justify-content: space-between;
+    gap: 50px;
+}
+/* brand info */
+.brand-info {
+    flex-basis: 35%;
+}
+
+.brand-info h3 {
+    font-size: 4.375rem;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 120%;
+    color: var(--primary-color);
+    margin-bottom: 18px;
+}
+
+/* footer menus */
+.footer-menu-1,
+.footer-menu-2 {
+    flex-basis: 25%;
+}
+
+.footer-menu-1 h3,
+.footer-menu-2 h3 {
+    font-size: 2rem;
+    font-weight: var(--fwB);
+}
+
+.footer-menu-1 ul,
+.footer-menu-2 ul {
+    padding: 0;
+    margin-top: 35px;
+}
+
+.footer-menu-1 ul li,
+.footer-menu-2 ul li {
+    margin-bottom: 15px;
+}
+
+.footer-menu-1 ul li a,
+.footer-menu-2 ul li a {
+    font-size: 1.063rem;
+}
+
+/* horizontal line */
+hr {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 60px;
+}
+
+/* footer copyright text */
+.copyright {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+}
+
+/*==================================================
+                footer section end
+==================================================*/
+
 
 
 
@@ -543,10 +617,10 @@ p.banner-text {
         display: block;
     }
 
-    /* banner, single habit items, cta-wrap */
+    /* banner, single habit items, cta-wrap, footer-wrap */
     .banner,
     .habits,
-    .cta-wrap {
+    .cta-wrap, .footer-wrap {
         flex-direction: column;
     }
 
