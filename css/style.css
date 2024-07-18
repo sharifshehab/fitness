@@ -161,8 +161,10 @@ h6 {
     display: flex;
 }
 
-.text-center {
+.section-title {
     text-align: center;
+    max-width: 671px;
+    margin: 0 auto;
 }
 
 /*==================================================
@@ -421,6 +423,91 @@ p.banner-text {
                 cta section end
 ==================================================*/
 
+/*==================================================
+                team section start
+==================================================*/
+
+.team-members {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: var(--secondary-dark-color);
+    border-radius: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 25px;
+}
+
+/* member images */
+.member-1 {
+    background-image: url(../images/trainer1.png);
+}
+
+.member-2 {
+    background-image: url(../images/trainer2.png);
+}
+
+.member-3 {
+    background-image: url(../images/trainer3.png);
+}
+
+.member-4 {
+    background-image: url(../images/trainer4.png);
+}
+
+.member-5 {
+    background-image: url(../images/trainer5.png);
+}
+
+.member-6 {
+    background-image: url(../images/trainer6.png);
+}
+
+.single-member {
+    width: 100%;
+    height: 330px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* member images overlay */
+.single-member::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.705) 0%, rgba(0, 0, 0, 0.164) 100%);
+    z-index: 1;
+}
+
+/* member info */
+.member-info {
+    z-index: 3;
+    position: absolute;
+    bottom: 16px;
+    left: 19px;
+}
+
+/* member title */
+.single-member h6 {
+    font-size: 20px;
+    font-weight: var(--fwH);
+    line-height: 120%;
+    margin-top: 20px;
+    margin-bottom: 3px;
+
+}
+
+/*==================================================
+                team section end
+==================================================*/
+
 
 
 
@@ -523,6 +610,9 @@ p.banner-text {
         text-align: center;
     }
 
-
+    /* team members */
+    .team-members {
+        grid-template-columns: 1fr;
+    }
 
 }
