@@ -78,7 +78,7 @@ input::placeholder {
 }
 
 p {
-    padding-top: 14px;
+    margin: 0;
 }
 
 h1,
@@ -107,7 +107,8 @@ h1 {
 h2 {
     font-size: 3rem;
     /* 48px */
-    line-height: 1.5;
+    line-height: 120%;
+    margin-bottom: 14px;
 }
 
 /* for section heading */
@@ -140,7 +141,7 @@ h6 {
 }
 
 .fit-btn {
-    padding: 16px 40px;
+    padding: 16px 48px;
     border-radius: 42px;
     color: var(--secondary-color);
     background-color: var(--primary-color);
@@ -388,6 +389,38 @@ p.banner-text {
                 habit section end
 ==================================================*/
 
+/*==================================================
+                cta section start
+==================================================*/
+.cta-wrap {
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-dark-color);
+    padding: 30px 32px 30px 54px;
+    border-radius: 18px;
+}
+
+.cta-content {
+    flex-basis: 35%;
+}
+
+.cta-content a {
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.cta-img {
+    flex-basis: 40%;
+}
+
+.cta-img img {
+    border-radius: 18px;
+}
+
+/*==================================================
+                cta section end
+==================================================*/
+
 
 
 
@@ -423,9 +456,10 @@ p.banner-text {
         display: block;
     }
 
-    /* banner, single habit items */
+    /* banner, single habit items, cta-wrap */
     .banner,
-    .habits {
+    .habits,
+    .cta-wrap {
         flex-direction: column;
     }
 
@@ -478,11 +512,16 @@ p.banner-text {
     }
 
     /* single habit items */
-    .habits {
+    .habits,
+    .cta-wrap {
         gap: 3rem;
     }
 
-
+    /* cta button */
+    .cta-content a {
+        width: 80%;
+        text-align: center;
+    }
 
 
 
