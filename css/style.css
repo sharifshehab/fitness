@@ -1,6 +1,7 @@
 /* google font -- Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+/* google font -- Dancing Script */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 
 
@@ -12,14 +13,13 @@
     --secondary-color: #FFFFFF;
     --secondary-dark-color: #222222;
     --text-color: #FFFFFF80;
-    
+
     --percent100: 100%;
 
     --fwN: 400;
-    --fwSB:600;
+    --fwSB: 600;
     --fwB: 700;
     --fwH: 900;
-
 }
 
 /*-------------------- 
@@ -50,6 +50,10 @@ a {
     color: inherit;
 }
 
+button {
+    font-family: "Inter", sans-serif;
+}
+
 ul {
     list-style: none;
 }
@@ -77,36 +81,47 @@ h1,
 h2,
 h3,
 h4,
+h5,
 h6 {
-   color: var(--secondary-color);
+    color: var(--secondary-color);
+    margin: 0;
 }
 
 h1,
 h2,
-h3{
-   font-weight: var(--fwH);
+h3 {
+    font-weight: var(--fwH);
 }
 
+/* for banner heading */
 h1 {
-    font-size: 4.8rem;
+    font-size: 4.875rem;
     line-height: 1;
 }
 
+/* for section title */
 h2 {
-    font-size: 3rem; /* 48px */
+    font-size: 3rem;
+    /* 48px */
 }
 
+/* for section heading */
 h3 {
-    font-size: 1.75rem; /* 28px */
+    font-size: 1.75rem;
+    /* 28px */
 }
 
+/* for footer heading */
 h4 {
-    font-size: 2rem; /* 32px */
+    font-size: 2rem;
+    /* 32px */
     font-weight: var(--fwB);
 }
 
+/* for item heading */
 h6 {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
+    /* 18px */
     font-weight: var(--fwSB);
 }
 
@@ -114,10 +129,9 @@ h6 {
   * REUSABLE SELECTION 
 ---------------------*/
 .container {
-    max-width: 1060px;
-    /* or 90% */
+    max-width: 1284px;
     margin: 0 auto;
-    /* padding: 0 0.938em; */
+    padding: 0 1.938em;
 }
 
 .fit-btn {
@@ -129,41 +143,175 @@ h6 {
     font-weight: var(--fwSB);
     line-height: 22px;
     letter-spacing: 0px;
-    text-align: center;
+    text-transform: capitalize;
 }
+
 .fit-border-btn {
-    /* padding: 16px 40px; */
-    /* border-radius: 42px; */
-    /* color: var(--secondary-color); */
     background-color: transparent;
     border: 1px solid var(--secondary-color);
-    /* font-size: 1.125rem;
-    font-weight: var(--fwSB);
-    line-height: 22px;
-    letter-spacing: 0px;
-    text-align: center; */
 }
 
 .flex {
     display: flex;
-    flex-wrap: wrap;
 }
 
 /*==================================================
                 header start
 ==================================================*/
+header {
+    background: linear-gradient(180.00deg, rgb(17, 17, 17), rgba(119, 119, 119, 0) 100%);
+}
 
 /*----------------- nav-bar -----------------*/
+nav {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 55px;
+}
 
 /* logo */
+.brand {
+    font-size: 2.25rem;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+
+/* burger menu for mobile */
+.burger-menu {
+    display: none;
+}
+
+.burger-menu svg.menu-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
 
 /* menu */
+ul.menu {
+    gap: 3rem;
+    align-items: center;
+}
+
+ul.menu li a {
+    font-size: 1.125rem;
+    color: var(--secondary-color);
+    text-transform: capitalize;
+}
+
+ul.menu li a.active {
+    padding: 8px 20px;
+    border-radius: 46px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
 
 /*----------------- hero-section -----------------*/
+.banner {
+    margin-top: 100px;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 20rem; */
+}
 
 /* content */
+.banner-content {
+    max-width: 620px;
+}
+
+.banner-title span {
+    font-family: "Dancing Script", sans-serif;
+    font-size: 6.25rem;
+    font-style: oblique;
+    font-weight: 100;
+}
+
+p.banner-text {
+    font-size: 1rem;
+    margin: 28px 0;
+}
+
+/* buttons */
+.banner-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 
 /* image */
+.banner-img-wrap {
+    position: relative;
+}
+
+/* top badge */
+.top-badge {
+    position: absolute;
+    top: 125px;
+    right: -65px;
+    padding: 16px 23px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: #3030308A;
+    backdrop-filter: blur(20px);
+}
+
+.top-badge h4,
+.bottom-badge div h5 {
+    font-size: 2.5rem;
+    font-weight: var(--fwH);
+    letter-spacing: 1px;
+    line-height: 40px;
+    color: var(--secondary-color);
+}
+
+.top-badge div p,
+.bottom-badge div p {
+    font-size: 0.8125rem;
+    letter-spacing: 0.5px;
+    color: #FFFFFFA6;
+    margin: 8px 0 0;
+}
+
+/* bottom badge */
+.bottom-badge {
+    position: absolute;
+    bottom: 65px;
+    left: -120px;
+    padding: 20px 23px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: #3030308A;
+    backdrop-filter: blur(20px);
+}
+
+/* round shape */
+.bottom-badge span {
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.bottom-badge div h5 {
+    font-size: 1.5rem;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+}
+
+.bottom-badge div p {
+    font-size: 1rem;
+}
 
 /*==================================================
                 header end
@@ -176,8 +324,81 @@ h6 {
 /* Desktop */
 @media screen and (min-width: 993px) {}
 
+/* Laptop */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .top-badge {
+        right: -15px;
+    }
+
+    .top-badge h4 {
+        font-size: 2rem;
+        line-height: 30px;
+    }
+}
+
 /* Tablet */
 @media screen and (min-width: 576px) and (max-width: 992px) {}
 
 /* Mobile */
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+
+    /* nav bar */
+    ul.menu {
+        display: none;
+    }
+
+    /* burger menu */
+    .burger-menu {
+        display: block;
+    }
+
+    /* banner */
+    .banner {
+        flex-direction: column;
+    }
+
+    /* banner heading */
+    h1.banner-title {
+        font-size: 2.25rem;
+        line-height: 120%;
+    }
+
+    /* banner heading span */
+    .banner-title span {
+        font-size: 5rem;
+    }
+
+    /* button */
+    .fit-btn {
+        padding: 16px 25px;
+    }
+
+    /* top badge */
+    .top-badge {
+        top: 45px;
+        right: -20px;
+        padding: 13px 18px;
+    }
+
+    /* bottom badge */
+    .bottom-badge {
+        bottom: 250px;
+        left: 0px;
+        padding: 15px 17px;
+    }
+
+    /* top badge heading */
+    .top-badge h4,
+    .bottom-badge div h5 {
+        font-size: 1.875rem;
+        letter-spacing: 0.76px;
+    }
+
+    /* bottom badge heading */
+    .bottom-badge div h5 {
+        font-size: 1.125rem;
+        letter-spacing: 0.23px;
+    }
+
+
+}
