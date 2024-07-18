@@ -77,6 +77,10 @@ input::placeholder {
     font: inherit;
 }
 
+p {
+    padding-top: 14px;
+}
+
 h1,
 h2,
 h3,
@@ -103,6 +107,7 @@ h1 {
 h2 {
     font-size: 3rem;
     /* 48px */
+    line-height: 1.5;
 }
 
 /* for section heading */
@@ -153,6 +158,10 @@ h6 {
 
 .flex {
     display: flex;
+}
+
+.text-center {
+    text-align: center;
 }
 
 /*==================================================
@@ -318,6 +327,68 @@ p.banner-text {
 ==================================================*/
 
 
+/*==================================================
+                habit section start
+==================================================*/
+/* habits wrap */
+.habits {
+    margin-top: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* single habit */
+.single-habit {
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* habit images */
+.habit-1 .habit-img {
+    background-image: url('../images/image\ 3.png');
+}
+
+.habit-2 .habit-img {
+    background-image: url('../images/image\ 2.png');
+}
+
+.habit-3 .habit-img {
+    background-image: url('../images/image\ 4.png');
+}
+
+.habit-4 .habit-img {
+    background-image: url('../images/image\ 5.png');
+}
+
+.habit-img {
+    width: 218px;
+    height: 218px;
+    background: var(--secondary-color);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: 4px solid var(--secondary-dark-color);
+    border-radius: 100%;
+}
+
+/* habit title */
+.single-habit h6 {
+    margin-top: 25px;
+}
+
+/* habit text */
+.single-habit p {
+    margin-top: 6px;
+    padding: 0 3px;
+}
+
+/*==================================================
+                habit section end
+==================================================*/
+
+
 
 
 /*----------------- responsive media query -----------------*/
@@ -352,8 +423,9 @@ p.banner-text {
         display: block;
     }
 
-    /* banner */
-    .banner {
+    /* banner, single habit items */
+    .banner,
+    .habits {
         flex-direction: column;
     }
 
@@ -399,6 +471,19 @@ p.banner-text {
         font-size: 1.125rem;
         letter-spacing: 0.23px;
     }
+
+    /* habits section title */
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* single habit items */
+    .habits {
+        gap: 3rem;
+    }
+
+
+
 
 
 }
