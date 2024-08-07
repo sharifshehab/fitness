@@ -111,16 +111,17 @@ h2 {
     margin-bottom: 14px;
 }
 
-/* for section heading */
-h3 {
-    font-size: 1.75rem;
-    /* 28px */
-}
-
 /* for footer heading */
-h4 {
+h3 {
     font-size: 2rem;
     /* 32px */
+    line-height: 120%;
+}
+
+/* for section heading */
+h4 {
+    font-size: 1.75rem;
+    /* 28px */
     font-weight: var(--fwB);
 }
 
@@ -161,23 +162,35 @@ h6 {
     display: flex;
 }
 
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .section-title {
     text-align: center;
     max-width: 671px;
     margin: 0 auto;
 }
 
+.round-border {
+    border-radius: 18px;
+}
+
+.text-left {
+    text-align: left;
+}
+
 /*==================================================
                 header start
 ==================================================*/
 header {
-    background: linear-gradient(180.00deg, rgb(17, 17, 17), rgba(119, 119, 119, 0) 100%);
+    background: linear-gradient(180.00deg, rgb(34, 34, 34), rgba(119, 119, 119, 0) 100%);
 }
 
 /*----------------- nav-bar -----------------*/
 nav {
-    justify-content: space-between;
-    align-items: center;
     padding-top: 55px;
 }
 
@@ -223,9 +236,6 @@ ul.menu li a.active {
 /*----------------- hero-section -----------------*/
 .banner {
     margin-top: 100px;
-    justify-content: space-between;
-    align-items: center;
-    /* gap: 20rem; */
 }
 
 /* content */
@@ -336,8 +346,8 @@ p.banner-text {
 /* habits wrap */
 .habits {
     margin-top: 60px;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 
 /* single habit */
@@ -385,6 +395,7 @@ p.banner-text {
 .single-habit p {
     margin-top: 6px;
     padding: 0 3px;
+    text-align: center;
 }
 
 /*==================================================
@@ -395,11 +406,8 @@ p.banner-text {
                 cta section start
 ==================================================*/
 .cta-wrap {
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--secondary-dark-color);
     padding: 30px 32px 30px 54px;
-    border-radius: 18px;
 }
 
 .cta-content {
@@ -415,12 +423,105 @@ p.banner-text {
     flex-basis: 40%;
 }
 
-.cta-img img {
-    border-radius: 18px;
-}
-
 /*==================================================
                 cta section end
+==================================================*/
+
+/*==================================================
+              bmi calculator section start
+==================================================*/
+.bmi-calculator {
+    margin-top: 85px;
+    padding: 50px 0;
+    background-color: var(--secondary-dark-color);
+}
+
+.calculator-wrap {
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/*----------------- calculator chart -----------------*/
+.calculator-chart table {
+    margin-top: 52px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #FFFFFF1A;
+    padding: 13px 24px;
+}
+
+th {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+td {
+    color: var(--text-color);
+}
+
+/*----------------- calculator field -----------------*/
+.calculator-field {
+    flex-basis: 45%;
+}
+
+.calculator-field p {
+    margin: 15px 0 35px;
+}
+
+.input-wrap {
+    display: grid;
+    grid-template-areas:
+        'height    weight'
+        'age       gender'
+        'activity  activity';
+    grid-gap: 15px;
+}
+
+
+div.input-wrap .height {
+    grid-area: height;
+}
+
+div.input-wrap .weight {
+    grid-area: weight;
+}
+
+div.input-wrap .age {
+    grid-area: age;
+}
+
+div.input-wrap .gender {
+    grid-area: gender;
+}
+
+div.input-wrap .activity {
+    grid-area: activity;
+}
+
+.input-wrap input,
+.input-wrap select {
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    padding: 12px 10px;
+    background: #FFFFFF1A;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input-wrap select option {
+    background: var(--secondary-dark-color);
+}
+
+
+/*==================================================
+               bmi calculator section end
 ==================================================*/
 
 /*==================================================
@@ -431,7 +532,6 @@ p.banner-text {
     margin-top: 60px;
     padding: 20px;
     background-color: var(--secondary-dark-color);
-    border-radius: 18px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -470,7 +570,6 @@ p.banner-text {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    border-radius: 18px;
     overflow: hidden;
 }
 
@@ -509,6 +608,116 @@ p.banner-text {
 ==================================================*/
 
 /*==================================================
+                pricing plan section start
+==================================================*/
+.plans-wrap {
+    margin-top: 60px;
+    justify-content: space-between;
+}
+
+/* single plan */
+.single-plan {
+    flex: 0 0 25%;
+    background-color: var(--secondary-dark-color);
+    padding: 40px 35px 65px;
+}
+
+/* plan title */
+.single-plan .plan-title h5 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+/* horizontal bar */
+.single-plan hr {
+    margin: 20px 0 30px;
+    border: 1px solid var(--primary-color);
+}
+
+/* price */
+.single-plan .price h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* currency */
+.single-plan .price .currency {
+    font-size: 1.25rem;
+    font-weight: var(--fwSB);
+}
+
+/* per-month */
+.single-plan .price .period {
+    font-size: 1.375rem;
+    font-weight: var(--fwSB);
+}
+
+/* plan - single feature */
+.plan-single-feature p {
+    font-weight: var(--fwSB);
+}
+
+/* button*/
+.join-button {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* primary-color */
+/* plan title, price, single-plan feature span */
+.single-plan .plan-title h5,
+.single-plan .price h3,
+.single-plan .plan-single-feature span {
+    color: var(--primary-color);
+}
+
+/* secondary-color */
+/* plan description, currency and period, plan - single feature */
+.single-plan .plan-title p,
+.single-plan .price,
+.single-plan .plan-single-feature p {
+    color: var(--secondary-color);
+}
+
+
+/* height light plan */
+
+/* single-plan */
+.height-light-plan {
+    background-color: var(--primary-color);
+}
+
+/* button*/
+.height-light-plan .join-button a {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+/* secondary-color */
+.height-light-plan .plan-title h5,
+.height-light-plan .price h3,
+.height-light-plan .plan-single-feature span {
+    color: var(--secondary-color);
+}
+
+/* secondary-dark-color */
+/* plan description, currency and period, plan - single feature */
+.height-light-plan .plan-title p,
+.height-light-plan .price,
+.height-light-plan .plan-single-feature p {
+    color: var(--secondary-dark-color);
+}
+
+/* horizontal bar */
+.height-light-plan hr {
+    border: 1px solid var(--secondary-color);
+}
+
+/*==================================================
+                pricing plan section end
+==================================================*/
+
+/*==================================================
                 footer section start
 ==================================================*/
 footer {
@@ -520,6 +729,7 @@ footer {
     justify-content: space-between;
     gap: 50px;
 }
+
 /* brand info */
 .brand-info {
     flex-basis: 35%;
@@ -583,8 +793,6 @@ hr {
 ==================================================*/
 
 
-
-
 /*----------------- responsive media query -----------------*/
 /* Desktop */
 @media screen and (min-width: 993px) {}
@@ -602,7 +810,17 @@ hr {
 }
 
 /* Tablet */
-@media screen and (min-width: 576px) and (max-width: 992px) {}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+
+    /* banner, plans-wrap */
+    .banner,
+    .plans-wrap {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+
+}
 
 /* Mobile */
 @media screen and (max-width: 576px) {
@@ -617,10 +835,13 @@ hr {
         display: block;
     }
 
-    /* banner, single habit items, cta-wrap, footer-wrap */
+    /* banner, single habit items, cta-wrap, footer-wrap, calculator-wrap, plans-wrap */
     .banner,
     .habits,
-    .cta-wrap, .footer-wrap {
+    .cta-wrap,
+    .footer-wrap,
+    .calculator-wrap,
+    .plans-wrap {
         flex-direction: column;
     }
 
@@ -674,7 +895,8 @@ hr {
 
     /* single habit items */
     .habits,
-    .cta-wrap {
+    .cta-wrap,
+    .plans-wrap {
         gap: 3rem;
     }
 
@@ -684,9 +906,18 @@ hr {
         text-align: center;
     }
 
+    /* bmi calculator */
+    .input-wrap input {
+        width: 94%;
+    }
+
     /* team members */
     .team-members {
         grid-template-columns: 1fr;
+    }
+
+    .mp {
+        padding: 0 1.938em;
     }
 
 }

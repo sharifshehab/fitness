@@ -9,12 +9,76 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .custom-select-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+            /* Adjust width as needed */
+        }
+    
+        .custom-select {
+            display: none;
+            /* Hide native select */
+        }
+    
+        .custom-select-trigger {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            /* Add padding */
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+    
+        .custom-select-trigger::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            padding: 3px;
+            transform: rotate(45deg);
+            pointer-events: none;
+        }
+    
+        .custom-options {
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 99;
+            display: none;
+            margin-top: 5px;
+            /* Space between selected item and options */
+        }
+    
+        .custom-options.open {
+            display: block;
+        }
+    
+        .custom-option {
+            padding: 10px;
+            /* Add padding for gaps */
+            cursor: pointer;
+            background-color: white;
+        }
+    
+        .custom-option:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <div class="container">
-            <nav class="flex">
+            <nav class="flex-between">
                 <div class="brand"><a href="#">Fitness</a></div><!-- brand -->
                 <ul class="menu flex">
                     <li><a href="#" class="active">home</a></li>
@@ -29,12 +93,12 @@
                             d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
                     </svg></a>
             </nav>
-            <div class="banner flex">
+            <div class="banner flex-between">
                 <div class="banner-content">
-                    <h1 class="banner-title">Get body in <span>shape</span> & stay healthy</h1>
-                    <p class="banner-text">A huge selection of health and fitness content, healthy recipes and
-                        transformation stories to help you get fit and stay
-                        fit!</p>
+                    <h1 class="banner-title">Shape up for a <span>vibrant</span> and healthy life </h1>
+                    <p class="banner-text">For a vibrant lifestyle and to maintain lasting health, Join us today and get
+                        expert guidance and personalized programs
+                        for you!</p>
                     <div class="banner-buttons">
                         <a href="#" class="fit-btn">join club now</a>
                         <a href="#" class="fit-btn fit-border-btn">download app</a>
@@ -65,30 +129,30 @@
         <section>
             <div class="container">
                 <div class="section-title">
-                    <h2>Change Your Habits</h2>
-                    <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access
-                        to a gym.</p>
+                    <h2>Revamp Your Daily Habits</h2>
+                    <p>Our aim is to make fitness available for everyone, regardless of location, situation or access to
+                        a gym facilities.</p>
                 </div><!-- section-title -->
-                <div class="habits flex">
-                    <div class="single-habit habit-1">
-                        <div class="habit-img"></div><!-- habit-img -->
-                        <h6>Movement</h6>
-                        <p class="text-center">We believe fitness should be accessible to everyone</p>
-                    </div><!-- single-habit -->
+                <div class="habits flex-between">
                     <div class="single-habit habit-2">
                         <div class="habit-img"></div><!-- habit-img -->
-                        <h6>Time</h6>
-                        <p class="text-center">We believe fitness should be accessible to everyone</p>
+                        <h6>Stretching</h6>
+                        <p class="text-center">Stretching improves flexibility, and reduces the risk of any injury</p>
+                    </div><!-- single-habit -->
+                    <div class="single-habit habit-1">
+                        <div class="habit-img"></div><!-- habit-img -->
+                        <h6>Modern Equipment</h6>
+                        <p class="text-center">Cutting-edge modern equipment makes working out a pleasure</p>
                     </div><!-- single-habit -->
                     <div class="single-habit habit-3">
                         <div class="habit-img"></div><!-- habit-img -->
-                        <h6>Practice</h6>
-                        <p class="text-center">We believe fitness should be accessible to everyone</p>
+                        <h6>Accurate Form</h6>
+                        <p class="text-center">Accurate Form is the key for desired fitness and improvement</p>
                     </div><!-- single-habit -->
                     <div class="single-habit habit-4">
                         <div class="habit-img"></div><!-- habit-img -->
-                        <h6>Weight Loss</h6>
-                        <p class="text-center">We believe fitness should be accessible to everyone</p>
+                        <h6>Strategic Movement</h6>
+                        <p class="text-center">Strategic movement reduces the risk of injuries by allowing joints to recover</p>
                     </div><!-- single-habit -->
                 </div><!-- habits -->
             </div><!-- container -->
@@ -97,78 +161,272 @@
         <!-- cta section start -->
         <section>
             <div class="container">
-                <div class="cta-wrap flex">
+                <div class="cta-wrap flex-between round-border">
                     <div class="cta-content">
-                        <h2>Run an Extra Mile Easily</h2>
-                        <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or
-                            access to a gym. With
-                            hundreds
-                            of professional workouts.</p>
-                            <a href="#" class="fit-btn">join now</a>
+                        <h2>Add An Extra Mile To Routine</h2>
+                        <p>Set higher goals and embrace the challenge of surpassing them. It’s not just about physical endurance but also about the
+                        mental strength to exceed your limits.</p>
+                        <a href="#" class="fit-btn">join now</a>
                     </div><!-- cta-content -->
                     <div class="cta-img">
-                        <img src="images/run.jpg" alt="a man running in the morning">
+                        <img src="images/run.jpg" class="round-border" alt="a man running in the morning">
                     </div><!-- cta-img -->
                 </div><!-- cta-wrap -->
             </div><!-- container -->
         </section>
 
+        <!-- bmi calculator start -->
+        <section>
+            <div class="section-title text-left mp">
+                <h2>BMI Calculator</h2>
+                <p>Track changes in your body composition over time and set your realistic health and fitness goals.</p>
+            </div><!-- section-title -->
+            <div class="bmi-calculator">
+                <div class="container">
+                    <div class="calculator-wrap flex">
+                        <div class="calculator-chart">
+                            <h4>BMI Calculator Chart</h4>
+                            <table class="text-left">
+                                <tr>
+                                    <th>BMI</th>
+                                    <th>Weight Status</th>
+                                </tr> <!-- table head -->
+
+                                <tr>
+                                    <td>Below - 18.5</td>
+                                    <td>Underweight</td>
+                                </tr>
+                                <tr>
+                                    <td>18.5 - 24.9</td>
+                                    <td>Healthy</td>
+                                </tr>
+                                <tr>
+                                    <td>25.0 - 29.9</td>
+                                    <td>Overweight</td>
+                                </tr>
+                                <tr>
+                                    <td>30.0 - and Above</td>
+                                    <td>Obese</td>
+                                </tr>
+
+                            </table>
+                        </div><!-- calculator-chart -->
+                        <div class="calculator-field">
+                            <h3>Calculate your BMI</h3>
+                            <p>BMI offers insights into your overall health and helps you identify whether you are within a healthy weight range for
+                            your height.</p>
+                            <form action="#">
+                                <div class="input-wrap">
+                                    <div class="height">
+                                        <input type="text" placeholder="Height/cm">
+                                    </div><!-- col-6 -->
+                                    <div class="weight">
+                                        <input type="text" placeholder="Weight/kg">
+                                    </div><!-- col-6 -->
+                                    <div class="age">
+                                        <input type="text" placeholder="Age">
+                                    </div><!-- col-6 -->
+                                    <div class="gender">
+                                        <select name="gender">
+                                            <option value="" disabled selected hidden>Sex</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div><!-- col-6 -->
+                                    <div class="activity">
+                                        <select name="activity">
+                                            <option value="" disabled selected hidden>Select an activity factor</option>
+                                            <option value="no-physical-activity">No Physical Activity</option>
+                                            <option value="light-activity">Light Activity</option>
+                                            <option value="hight-activity">Heavy Activity</option>
+                                        </select>
+                                    </div><!-- col-12 -->
+                                </div><!-- input-wrap -->
+                            </form>
+                        </div><!-- calculator-field -->
+                    </div><!-- calculator-wrap -->
+                </div><!-- container -->
+            </div><!-- bmi-calculator -->
+        </section>
+
         <!-- team section start -->
-         <section>
+        <section>
             <div class="container">
                 <div class="section-title">
                     <h2>Meet Our Team</h2>
-                    <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym.</p>
+                    <p>Our dedicated and passionate team is committed to help you achieve your goals. Standing by for your guidance and support.</p>
                 </div><!-- section-title -->
-                <div class="team-members">
-                    <div class="single-member member-1">
+                <div class="team-members round-border">
+                    <div class="single-member round-border member-1">
                         <div class="member-info">
                             <h6>Jerome Bell</h6>
-                            <p>Trainer</p>
+                            <p>Powerlifter</p>
                         </div><!-- member-info -->
                     </div><!-- single-member -->
-                    <div class="single-member member-2">
+                    <div class="single-member round-border member-2">
                         <div class="member-info">
                             <h6>Jerome Bell</h6>
-                            <p>Trainer</p>
+                            <p>Nutritionist
+</p>
                         </div><!-- member-info -->
                     </div><!-- single-member -->
-                    <div class="single-member member-3">
+                    <div class="single-member round-border member-3">
                         <div class="member-info">
                             <h6>Jerome Bell</h6>
-                            <p>Trainer</p>
+                            <p>Strength Coach
+</p>
                         </div><!-- member-info -->
                     </div><!-- single-member -->
-                    <div class="single-member member-4">
+                    <div class="single-member round-border member-4">
                         <div class="member-info">
                             <h6>Jerome Bell</h6>
-                            <p>Trainer</p>
+                            <p>Dietitian</p>
                         </div><!-- member-info -->
                     </div><!-- single-member -->
-                    <div class="single-member member-5">
+                    <div class="single-member round-border member-5">
                         <div class="member-info">
                             <h6>Jerome Bell</h6>
-                            <p>Trainer</p>
+                            <p>Conditioning Specialist</p>
                         </div><!-- member-info -->
                     </div><!-- single-member -->
-                    <div class="single-member member-6">
+                    <div class="single-member round-border member-6">
                         <div class="member-info">
                             <h6>Jerome Bell</h6>
-                            <p>Trainer</p>
+                            <p>Athletic Trainer</p>
                         </div><!-- member-info -->
                     </div><!-- single-member -->
                 </div><!-- team-members -->
-              
+
             </div><!-- container -->
-         </section>
+        </section>
+
+        <!-- plans section -->
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Joining Plans</h2>
+                    <p>Affordable and quality service within your reach. Start the journey for better health with us and reshape yourself.</p>
+                </div><!-- section-title -->
+                <div class="plans-wrap flex">
+                    <div class="single-plan round-border">
+                        <div class="plan-title">
+                            <h5>Basic Plan</h5>
+                            <p>Best suitable for beginners</p>
+                        </div><!-- plan-title -->
+                        <hr>
+                        <div class="price">
+                            <h3><sup class="currency">$</sup>29.00<sub class="period">/Month</sub></h3>
+                        </div>
+                        <div class="plan-features">
+                            <div class="plan-single-feature flex-between">
+                                <p>Single day Access</p>
+                                <span> <i class="fas fa-check"></i> </span>
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Personal Trainer</p>
+                                <span> <i class="fas fa-check"></i> </span>
+
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Nutrition Plan</p>
+                                <span> <i class="fas fa-times"></i> </span>
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Diet Planning</p>
+                                <span> <i class="fas fa-times"></i> </span>
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Weekly Events</p>
+                                <span> <i class="fas fa-times"></i> </span>
+                            </div><!-- plan-single-feature -->
+                        </div><!-- plan-features -->
+                        <div class="join-button">
+                            <a href="#" class="fit-btn">Join Now</a>
+                        </div><!-- join-button -->
+                    </div><!-- single-plan -->
+                    <div class="single-plan round-border height-light-plan">
+                        <div class="plan-title">
+                            <h5>Advance Plan</h5>
+                            <p>Best suitable for professionals</p>
+                        </div><!-- plan-title -->
+                        <hr>
+                        <div class="price">
+                            <h3><sup class="currency">$</sup>49.00<sub class="period">/Month</sub></h3>
+                        </div>
+                        <div class="plan-features">
+                            <div class="plan-single-feature flex-between">
+                                <p>Single day Access</p>
+                                <span> <i class="fas fa-check"></i> </span>
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Personal Trainer</p>
+                                <span> <i class="fas fa-check"></i> </span>
+
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Nutrition Plan</p>
+                                <span> <i class="fas fa-check"></i> </span>
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Diet Planning</p>
+                                <span> <i class="fas fa-check"></i> </span>
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Weekly Events</p>
+                                <span> <i class="fas fa-times"></i> </span>
+                            </div><!-- plan-single-feature -->
+                        </div><!-- plan-features -->
+                        <div class="join-button">
+                            <a href="#" class="fit-btn">Join Now</a>
+                        </div><!-- join-button -->
+                    </div><!-- single-plan -->
+                    <div class="single-plan round-border">
+                        <div class="plan-title">
+                            <h5>Premium Plan</h5>
+                            <p>Best suitable for Athletes</p>
+                        </div><!-- plan-title -->
+                        <hr>
+                        <div class="price">
+                            <h3><sup class="currency">$</sup>79.00<sub class="period">/Month</sub></h3>
+                        </div>
+                        <div class="plan-features">
+                            <div class="plan-single-feature flex-between">
+                                <p>Single day Access</p>
+                                <span> <i class="fas fa-check"></i> </span>
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Personal Trainer</p>
+                                <span> <i class="fas fa-check"></i> </span>
+
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Nutrition Plan</p>
+                                <span> <i class="fas fa-check"></i> </span>
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Diet Planning</p>
+                                <span> <i class="fas fa-check"></i> </span>
+                            </div><!-- plan-single-feature -->
+                            <div class="plan-single-feature flex-between">
+                                <p>Weekly Events</p>
+                                <span> <i class="fas fa-check"></i> </span>
+                            </div><!-- plan-single-feature -->
+                        </div><!-- plan-features -->
+                        <div class="join-button">
+                            <a href="#" class="fit-btn">Join Now</a>
+                        </div><!-- join-button -->
+                    </div><!-- single-plan -->
+                </div><!-- plans-wrap -->
+            </div><!-- container -->
+        </section>
     </main>
     <footer>
         <div class="container">
             <div class="footer-wrap flex">
                 <div class="brand-info">
                     <h3>Fitness</h3>
-                    <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With hundreds
-                    of professional workouts.</p>
+                    <p>We're dedicated to helping you achieve your fitness goals. Our comprehensive fitness programs, expert advice, and
+                    supportive community are with you in every step of the way.</p>
                 </div><!-- brand-info -->
                 <div class="footer-menu-1">
                     <h3>Get Started</h3>
