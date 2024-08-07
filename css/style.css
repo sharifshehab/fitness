@@ -323,6 +323,20 @@ p.banner-text {
     width: 40px;
     height: 40px;
     display: inline-block;
+    position: relative;
+}
+
+.bottom-badge span::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url('../images/play-solid.svg');
+  background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .bottom-badge div h5 {
@@ -519,6 +533,25 @@ div.input-wrap .activity {
     background: var(--secondary-dark-color);
 }
 
+.gender select,
+.activity select {
+    appearance: none;
+    /* Remove default arrow */
+    -webkit-appearance: none;
+    /* For Safari */
+    -moz-appearance: none;
+    /* For Firefox */
+    background-image: url('../images/chevron-down-solid.svg');
+    /* Custom arrow image */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 13px;
+}
+
+.submit-btn a {
+    display: inline-block;
+    margin-top: 35px;
+}
 
 /*==================================================
                bmi calculator section end
@@ -818,8 +851,6 @@ hr {
         flex-direction: column;
         gap: 3rem;
     }
-
-
 }
 
 /* Mobile */
@@ -857,8 +888,8 @@ hr {
     }
 
     /* button */
-    .fit-btn {
-        padding: 16px 25px;
+    .banner-buttons a {
+        padding: 16px 22px;
     }
 
     /* top badge */
@@ -902,13 +933,8 @@ hr {
 
     /* cta button */
     .cta-content a {
-        width: 80%;
+        width: 66%;
         text-align: center;
-    }
-
-    /* bmi calculator */
-    .input-wrap input {
-        width: 94%;
     }
 
     /* team members */
