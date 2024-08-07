@@ -529,9 +529,13 @@ div.input-wrap .activity {
     border: none;
     padding: 12px 10px;
     background: #FFFFFF1A;
-    color: #fff;
+    color: #FFFFFF99;
     font-size: 16px;
     box-sizing: border-box;
+}
+.input-wrap input::placeholder {
+    color: #FFFFFF99;
+
 }
 
 .input-wrap select option {
@@ -733,16 +737,15 @@ div.input-wrap .activity {
 
 /* secondary-color */
 .height-light-plan .plan-title h5,
-.height-light-plan .price h3,
-.height-light-plan .plan-single-feature span {
+.height-light-plan .plan-single-feature p {
     color: var(--secondary-color);
 }
 
 /* secondary-dark-color */
 /* plan description, currency and period, plan - single feature */
 .height-light-plan .plan-title p,
-.height-light-plan .price,
-.height-light-plan .plan-single-feature p {
+.height-light-plan .price h3,
+.height-light-plan .price, .height-light-plan .plan-single-feature span{
     color: var(--secondary-dark-color);
 }
 
