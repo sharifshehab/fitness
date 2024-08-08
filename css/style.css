@@ -441,6 +441,11 @@ p.banner-text {
 .cta-img {
     flex-basis: 40%;
 }
+.cta-img img{
+    object-fit: none;
+    object-position: 67% 27%;
+}
+
 
 /*==================================================
                 cta section end
